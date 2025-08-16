@@ -1,0 +1,652 @@
+[
+    {
+        "name": "Eden Foods New York Downtown",
+        "address": "456 Broadway, New York, New York 10013",
+        "phone": "(212) 555-0101",
+        "hours": "9:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Loyalty members: Earn double points on bakery",
+            "Loyalty members: Earn double points on dairy",
+            "Buy one get one free on organic apples"
+        ],
+        "latitude": 40.721,
+        "longitude": -74.001
+    },
+    {
+        "name": "Eden Foods Chicago Loop",
+        "address": "789 State St, Chicago, Illinois 60605",
+        "phone": "(312) 555-0202",
+        "hours": "10:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "frozen foods special: $1 off each item",
+            "meat special: $1 off each item",
+            "Loyalty members: Earn double points on produce"
+        ],
+        "latitude": 41.871,
+        "longitude": -87.627
+    },
+    {
+        "name": "Eden Foods Los Angeles Westside",
+        "address": "321 Sunset Blvd, Los Angeles, California 90028",
+        "phone": "(213) 555-0303",
+        "hours": "8:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "Midweek special: 10% off all frozen foods",
+            "honey now just $0.99",
+            "Midweek special: 10% off all produce"
+        ],
+        "latitude": 34.098,
+        "longitude": -118.326
+    },
+    {
+        "name": "Eden Foods Houston Galleria",
+        "address": "123 Westheimer Rd, Houston, Texas 77056",
+        "phone": "(713) 555-0404",
+        "hours": "10:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Weekend only: 2 for $5 organic apples",
+            "Free tofu with purchases over $30",
+            "Free organic apples with purchases over $30"
+        ],
+        "latitude": 29.738,
+        "longitude": -95.462
+    },
+    {
+        "name": "Eden Foods Phoenix Central",
+        "address": "456 Central Ave, Phoenix, Arizona 85004",
+        "phone": "(602) 555-0505",
+        "hours": "8:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "20% off all frozen foods",
+            "Free tofu with purchases over $30",
+            "tofu now just $0.99"
+        ],
+        "latitude": 33.448,
+        "longitude": -112.074
+    },
+    {
+        "name": "Eden Foods Philadelphia Center City",
+        "address": "789 Market St, Philadelphia, Pennsylvania 19107",
+        "phone": "(215) 555-0606",
+        "hours": "9:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Free sample of avocados at checkout",
+            "Midweek special: 10% off all frozen foods",
+            "Free honey with purchases over $30"
+        ],
+        "latitude": 39.951,
+        "longitude": -75.155
+    },
+    {
+        "name": "Eden Foods San Antonio Riverwalk",
+        "address": "321 Alamo Plaza, San Antonio, Texas 78205",
+        "phone": "(210) 555-0707",
+        "hours": "7:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "avocados now just $0.99",
+            "fresh herbs now just $0.99",
+            "Buy one get one free on trail mix"
+        ],
+        "latitude": 29.425,
+        "longitude": -98.486
+    },
+    {
+        "name": "Eden Foods San Diego Gaslamp",
+        "address": "654 Fifth Ave, San Diego, California 92101",
+        "phone": "(619) 555-0808",
+        "hours": "8:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Midweek special: 10% off all snacks",
+            "Free trail mix with purchases over $30",
+            "20% off all dairy"
+        ],
+        "latitude": 32.716,
+        "longitude": -117.160
+    },
+    {
+        "name": "Eden Foods Dallas Uptown",
+        "address": "987 McKinney Ave, Dallas, Texas 75201",
+        "phone": "(214) 555-0909",
+        "hours": "10:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "20% off all frozen foods",
+            "Midweek special: 10% off all frozen foods",
+            "Free trail mix with purchases over $30"
+        ],
+        "latitude": 32.784,
+        "longitude": -96.803
+    },
+    {
+        "name": "Eden Foods San Jose Downtown",
+        "address": "123 Market St, San Jose, California 95113",
+        "phone": "(408) 555-1010",
+        "hours": "8:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Midweek special: 10% off all meat",
+            "Weekend only: 2 for $5 trail mix",
+            "Loyalty members: Earn double points on dairy"
+        ],
+        "latitude": 37.336,
+        "longitude": -121.892
+    },
+    {
+        "name": "Eden Foods Austin South Congress",
+        "address": "456 Congress Ave, Austin, Texas 78701",
+        "phone": "(512) 555-1111",
+        "hours": "8:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Buy one get one free on dark chocolate",
+            "Loyalty members: Earn double points on dairy",
+            "snacks special: $1 off each item"
+        ],
+        "latitude": 30.267,
+        "longitude": -97.743
+    },
+    {
+        "name": "Eden Foods Jacksonville Riverside",
+        "address": "789 Riverside Ave, Jacksonville, Florida 32204",
+        "phone": "(904) 555-1212",
+        "hours": "10:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Free honey with purchases over $30",
+            "Free organic apples with purchases over $30",
+            "Loyalty members: Earn double points on produce"
+        ],
+        "latitude": 30.319,
+        "longitude": -81.676
+    },
+    {
+        "name": "Eden Foods San Francisco Mission",
+        "address": "321 Mission St, San Francisco, California 94105",
+        "phone": "(415) 555-1313",
+        "hours": "8:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "trail mix now just $0.99",
+            "Loyalty members: Earn double points on meat",
+            "bakery special: $1 off each item"
+        ],
+        "latitude": 37.791,
+        "longitude": -122.396
+    },
+    {
+        "name": "Eden Foods Columbus Short North",
+        "address": "654 High St, Columbus, Ohio 43215",
+        "phone": "(614) 555-1414",
+        "hours": "10:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "Buy one get one free on organic apples",
+            "Buy one get one free on trail mix",
+            "Free organic apples with purchases over $30"
+        ],
+        "latitude": 39.975,
+        "longitude": -83.003
+    },
+    {
+        "name": "Eden Foods Indianapolis Downtown",
+        "address": "987 Meridian St, Indianapolis, Indiana 46204",
+        "phone": "(317) 555-1515",
+        "hours": "7:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "20% off all meat",
+            "Loyalty members: Earn double points on meat",
+            "almond milk now just $0.99"
+        ],
+        "latitude": 39.781,
+        "longitude": -86.158
+    },
+    {
+        "name": "Eden Foods Seattle Market",
+        "address": "654 Pike St, Seattle, Washington 98101",
+        "phone": "(206) 555-1616",
+        "hours": "7:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Free sample of tofu at checkout",
+            "frozen foods special: $1 off each item",
+            "Loyalty members: Earn double points on frozen foods"
+        ],
+        "latitude": 47.611,
+        "longitude": -122.332
+    },
+    {
+        "name": "Eden Foods Denver LoDo",
+        "address": "123 Larimer St, Denver, Colorado 80202",
+        "phone": "(303) 555-1717",
+        "hours": "7:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "Weekend only: 2 for $5 fresh herbs",
+            "Weekend only: 2 for $5 trail mix",
+            "Free sample of honey at checkout"
+        ],
+        "latitude": 39.748,
+        "longitude": -105.000
+    },
+    {
+        "name": "Eden Foods Washington DC Georgetown",
+        "address": "456 M St NW, Washington, District of Columbia 20007",
+        "phone": "(202) 555-1818",
+        "hours": "10:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "almond milk now just $0.99",
+            "Free fresh herbs with purchases over $30",
+            "snacks special: $1 off each item"
+        ],
+        "latitude": 38.905,
+        "longitude": -77.060
+    },
+    {
+        "name": "Eden Foods Nashville Music Row",
+        "address": "789 16th Ave S, Nashville, Tennessee 37203",
+        "phone": "(615) 555-1919",
+        "hours": "7:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "fresh herbs now just $0.99",
+            "Loyalty members: Earn double points on dairy",
+            "bakery special: $1 off each item"
+        ],
+        "latitude": 36.152,
+        "longitude": -86.792
+    },
+    {
+        "name": "Eden Foods Boston Back Bay",
+        "address": "321 Newbury St, Boston, Massachusetts 02115",
+        "phone": "(617) 555-2020",
+        "hours": "7:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "organic apples now just $0.99",
+            "20% off all dairy",
+            "Free almond milk with purchases over $30"
+        ],
+        "latitude": 42.349,
+        "longitude": -71.086
+    },
+    {
+        "name": "Eden Foods Charlotte Uptown",
+        "address": "654 Tryon St, Charlotte, North Carolina 28202",
+        "phone": "(704) 555-2121",
+        "hours": "7:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Free avocados with purchases over $30",
+            "Free sample of organic apples at checkout",
+            "Free fresh herbs with purchases over $30"
+        ],
+        "latitude": 35.226,
+        "longitude": -80.843
+    },
+    {
+        "name": "Eden Foods Portland Pearl District",
+        "address": "987 10th St, Portland, Oregon 97209",
+        "phone": "(503) 555-2222",
+        "hours": "7:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "Free trail mix with purchases over $30",
+            "Free sample of dark chocolate at checkout",
+            "Loyalty members: Earn double points on produce"
+        ],
+        "latitude": 45.530,
+        "longitude": -122.681
+    },
+    {
+        "name": "Eden Foods Louisville Highlands",
+        "address": "123 Bardstown Rd, Louisville, Kentucky 40204",
+        "phone": "(502) 555-2323",
+        "hours": "10:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "bakery special: $1 off each item",
+            "20% off all bakery",
+            "Flash deal: 30% off organic apples"
+        ],
+        "latitude": 38.235,
+        "longitude": -85.717
+    },
+    {
+        "name": "Eden Foods Oklahoma City Bricktown",
+        "address": "456 Reno Ave, Oklahoma City, Oklahoma 73102",
+        "phone": "(405) 555-2424",
+        "hours": "8:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "Free avocados with purchases over $30",
+            "20% off all dairy",
+            "Flash deal: 30% off honey"
+        ],
+        "latitude": 35.465,
+        "longitude": -97.512
+    },
+    {
+        "name": "Eden Foods Las Vegas Strip",
+        "address": "789 Las Vegas Blvd S, Las Vegas, Nevada 89109",
+        "phone": "(702) 555-2525",
+        "hours": "7:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Buy one get one free on trail mix",
+            "produce special: $1 off each item",
+            "Midweek special: 10% off all meat"
+        ],
+        "latitude": 36.121,
+        "longitude": -115.172
+    },
+    {
+        "name": "Eden Foods Tucson Downtown",
+        "address": "321 Congress St, Tucson, Arizona 85701",
+        "phone": "(520) 555-2626",
+        "hours": "7:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Midweek special: 10% off all dairy",
+            "Free sample of dark chocolate at checkout",
+            "organic apples now just $0.99"
+        ],
+        "latitude": 32.222,
+        "longitude": -110.971
+    },
+    {
+        "name": "Eden Foods Albuquerque Old Town",
+        "address": "654 Central Ave SW, Albuquerque, New Mexico 87102",
+        "phone": "(505) 555-2727",
+        "hours": "7:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Buy one get one free on trail mix",
+            "20% off all meat",
+            "dairy special: $1 off each item"
+        ],
+        "latitude": 35.084,
+        "longitude": -106.651
+    },
+    {
+        "name": "Eden Foods Miami Beach",
+        "address": "987 Ocean Dr, Miami Beach, Florida 33139",
+        "phone": "(305) 555-2828",
+        "hours": "8:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "Loyalty members: Earn double points on dairy",
+            "fresh herbs now just $0.99",
+            "Flash deal: 30% off dark chocolate"
+        ],
+        "latitude": 25.781,
+        "longitude": -80.131
+    },
+    {
+        "name": "Eden Foods Atlanta Midtown",
+        "address": "123 Peachtree St, Atlanta, Georgia 30303",
+        "phone": "(404) 555-2929",
+        "hours": "8:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "tofu now just $0.99",
+            "Midweek special: 10% off all meat",
+            "Free sample of dark chocolate at checkout"
+        ],
+        "latitude": 33.757,
+        "longitude": -84.388
+    },
+    {
+        "name": "Eden Foods Raleigh Downtown",
+        "address": "456 Fayetteville St, Raleigh, North Carolina 27601",
+        "phone": "(919) 555-3030",
+        "hours": "10:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Free sample of fresh herbs at checkout",
+            "20% off all produce",
+            "Flash deal: 30% off tofu"
+        ],
+        "latitude": 35.775,
+        "longitude": -78.639
+    },
+    {
+        "name": "Eden Foods Kansas City Country Club",
+        "address": "789 Ward Pkwy, Kansas City, Missouri 64112",
+        "phone": "(816) 555-3131",
+        "hours": "8:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "Midweek special: 10% off all meat",
+            "Free almond milk with purchases over $30",
+            "Buy one get one free on honey"
+        ],
+        "latitude": 39.034,
+        "longitude": -94.598
+    },
+    {
+        "name": "Eden Foods Cleveland Ohio City",
+        "address": "321 W 25th St, Cleveland, Ohio 44113",
+        "phone": "(216) 555-3232",
+        "hours": "10:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "Weekend only: 2 for $5 dark chocolate",
+            "Weekend only: 2 for $5 avocados",
+            "Flash deal: 30% off tofu"
+        ],
+        "latitude": 41.485,
+        "longitude": -81.701
+    },
+    {
+        "name": "Eden Foods Sacramento Midtown",
+        "address": "654 J St, Sacramento, California 95814",
+        "phone": "(916) 555-3333",
+        "hours": "8:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "dark chocolate now just $0.99",
+            "frozen foods special: $1 off each item",
+            "Weekend only: 2 for $5 avocados"
+        ],
+        "latitude": 38.582,
+        "longitude": -121.498
+    },
+    {
+        "name": "Eden Foods Omaha Old Market",
+        "address": "987 Howard St, Omaha, Nebraska 68102",
+        "phone": "(402) 555-3434",
+        "hours": "9:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "Flash deal: 30% off fresh herbs",
+            "bakery special: $1 off each item",
+            "Flash deal: 30% off almond milk"
+        ],
+        "latitude": 41.256,
+        "longitude": -95.929
+    },
+    {
+        "name": "Eden Foods Minneapolis Uptown",
+        "address": "123 Hennepin Ave, Minneapolis, Minnesota 55401",
+        "phone": "(612) 555-3535",
+        "hours": "7:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "avocados now just $0.99",
+            "Midweek special: 10% off all snacks",
+            "Flash deal: 30% off tofu"
+        ],
+        "latitude": 44.981,
+        "longitude": -93.270
+    },
+    {
+        "name": "Eden Foods St. Louis Delmar Loop",
+        "address": "456 Delmar Blvd, St. Louis, Missouri 63108",
+        "phone": "(314) 555-3636",
+        "hours": "8:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Loyalty members: Earn double points on bakery",
+            "Midweek special: 10% off all frozen foods",
+            "bakery special: $1 off each item"
+        ],
+        "latitude": 38.646,
+        "longitude": -90.262
+    },
+    {
+        "name": "Eden Foods Orlando Downtown",
+        "address": "789 Orange Ave, Orlando, Florida 32801",
+        "phone": "(407) 555-3737",
+        "hours": "7:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "Flash deal: 30% off avocados",
+            "Weekend only: 2 for $5 organic apples",
+            "Loyalty members: Earn double points on dairy"
+        ],
+        "latitude": 28.538,
+        "longitude": -81.379
+    },
+    {
+        "name": "Eden Foods Tampa Ybor City",
+        "address": "321 7th Ave, Tampa, Florida 33602",
+        "phone": "(813) 555-3838",
+        "hours": "8:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "almond milk now just $0.99",
+            "trail mix now just $0.99",
+            "meat special: $1 off each item"
+        ],
+        "latitude": 27.947,
+        "longitude": -82.458
+    },
+    {
+        "name": "Eden Foods Salt Lake City Downtown",
+        "address": "654 Main St, Salt Lake City, Utah 84101",
+        "phone": "(801) 555-3939",
+        "hours": "8:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "dark chocolate now just $0.99",
+            "Free sample of honey at checkout",
+            "Free sample of avocados at checkout"
+        ],
+        "latitude": 40.760,
+        "longitude": -111.891
+    },
+    {
+        "name": "Eden Foods Milwaukee East Side",
+        "address": "987 Brady St, Milwaukee, Wisconsin 53202",
+        "phone": "(414) 555-4040",
+        "hours": "9:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Loyalty members: Earn double points on meat",
+            "20% off all dairy",
+            "Free dark chocolate with purchases over $30"
+        ],
+        "latitude": 43.046,
+        "longitude": -87.901
+    },
+    {
+        "name": "Eden Foods Cincinnati Over-the-Rhine",
+        "address": "123 Vine St, Cincinnati, Ohio 45202",
+        "phone": "(513) 555-4141",
+        "hours": "10:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "frozen foods special: $1 off each item",
+            "Free sample of dark chocolate at checkout",
+            "almond milk now just $0.99"
+        ],
+        "latitude": 39.108,
+        "longitude": -84.514
+    },
+    {
+        "name": "Eden Foods Boise Downtown",
+        "address": "456 8th St, Boise, Idaho 83702",
+        "phone": "(208) 555-4242",
+        "hours": "10:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Free sample of trail mix at checkout",
+            "Flash deal: 30% off organic apples",
+            "20% off all dairy"
+        ],
+        "latitude": 43.617,
+        "longitude": -116.203
+    },
+    {
+        "name": "Eden Foods New Orleans French Quarter",
+        "address": "789 Bourbon St, New Orleans, Louisiana 70116",
+        "phone": "(504) 555-4343",
+        "hours": "9:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Loyalty members: Earn double points on dairy",
+            "Midweek special: 10% off all produce",
+            "frozen foods special: $1 off each item"
+        ],
+        "latitude": 29.958,
+        "longitude": -90.065
+    },
+    {
+        "name": "Eden Foods Detroit Midtown",
+        "address": "321 Woodward Ave, Detroit, Michigan 48201",
+        "phone": "(313) 555-4444",
+        "hours": "8:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "fresh herbs now just $0.99",
+            "20% off all meat",
+            "Buy one get one free on fresh herbs"
+        ],
+        "latitude": 42.336,
+        "longitude": -83.049
+    },
+    {
+        "name": "Eden Foods Baltimore Inner Harbor",
+        "address": "654 Light St, Baltimore, Maryland 21230",
+        "phone": "(410) 555-4545",
+        "hours": "7:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "Free avocados with purchases over $30",
+            "Weekend only: 2 for $5 fresh herbs",
+            "Free sample of dark chocolate at checkout"
+        ],
+        "latitude": 39.282,
+        "longitude": -76.612
+    },
+    {
+        "name": "Eden Foods Pittsburgh Strip District",
+        "address": "987 Penn Ave, Pittsburgh, Pennsylvania 15222",
+        "phone": "(412) 555-4646",
+        "hours": "8:00 AM - 11:00 PM, Daily",
+        "promotions": [
+            "Flash deal: 30% off honey",
+            "20% off all frozen foods",
+            "Loyalty members: Earn double points on frozen foods"
+        ],
+        "latitude": 40.445,
+        "longitude": -79.996
+    },
+    {
+        "name": "Eden Foods Memphis Downtown",
+        "address": "123 Beale St, Memphis, Tennessee 38103",
+        "phone": "(901) 555-4747",
+        "hours": "7:00 AM - 9:00 PM, Daily",
+        "promotions": [
+            "meat special: $1 off each item",
+            "Midweek special: 10% off all snacks",
+            "Flash deal: 30% off tofu"
+        ],
+        "latitude": 35.141,
+        "longitude": -90.052
+    },
+    {
+        "name": "Eden Foods Virginia Beach Oceanfront",
+        "address": "456 Atlantic Ave, Virginia Beach, Virginia 23451",
+        "phone": "(757) 555-4848",
+        "hours": "8:00 AM - 8:00 PM, Daily",
+        "promotions": [
+            "Buy one get one free on organic apples",
+            "Buy one get one free on fresh herbs",
+            "20% off all snacks"
+        ],
+        "latitude": 36.833,
+        "longitude": -75.972
+    },
+    {
+        "name": "Eden Foods Des Moines East Village",
+        "address": "789 Grand Ave, Des Moines, Iowa 50309",
+        "phone": "(515) 555-4949",
+        "hours": "8:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "fresh herbs now just $0.99",
+            "Loyalty members: Earn double points on dairy",
+            "Flash deal: 30% off avocados"
+        ],
+        "latitude": 41.587,
+        "longitude": -93.618
+    },
+    {
+        "name": "Eden Foods Anchorage Downtown",
+        "address": "321 5th Ave, Anchorage, Alaska 99501",
+        "phone": "(907) 555-5050",
+        "hours": "10:00 AM - 10:00 PM, Daily",
+        "promotions": [
+            "20% off all bakery",
+            "Buy one get one free on dark chocolate",
+            "Free honey with purchases over $30"
+        ],
+        "latitude": 61.217,
+        "longitude": -149.894
+    }
+]

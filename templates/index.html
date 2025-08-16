@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eden Foods Chatbot</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #e9f5ec, #c8e6c9);
+      margin: 0; padding: 0; min-height: 100vh;
+      overflow: hidden; position: fixed; width: 100%;
+      touch-action: none; overscroll-behavior: none;
+    }
+    body { display: flex; justify-content: center; align-items: center; }
+    @media (max-width: 768px) {
+      body { align-items: flex-start; padding-top: 40px; }
+    }
+    .chat-container {
+      background-color: #ffffff; border-radius: 16px; border: 1px solid #555;
+      width: 375px; max-width: 100%; padding: 24px;
+      display: flex; flex-direction: column;
+      max-height: calc(100vh - 50px); overflow-y: auto;
+    }
+    h2 { text-align: center; color: #388e3c; margin-bottom: 16px; }
+    #chatbox {
+      flex-grow: 1; background-color: #f1f8e9; border-radius: 8px; padding: 12px;
+      height: 360px; min-height: 200px; max-height: calc(100vh - 230px);
+      overflow-y: auto; margin-bottom: 12px; font-size: 0.95rem;
+      display: flex; flex-direction: column; gap: 12px; position: relative;
+      -webkit-overflow-scrolling: touch; touch-action: auto;
+    }
+    @media (max-height: 600px) { #chatbox { height: calc(100vh - 270px); } }
+    .volume-btn-container {
+      position: absolute; top: 0; right: 0; width: 48px; height: 48px;
+      background-color: #f1f8e9; border-radius: 0 0 0 8px;
+      display: flex; justify-content: center; align-items: center; z-index: 10;
+    }
+    .volume-btn { width: 24px; height: 24px; cursor: pointer; transition: opacity 0.2s ease; }
+    .volume-btn:hover { opacity: 0.7; }
+    #userInput, button { width: 100%; }
+    #userInput { padding: 10px; border: 1px solid #c8e6c9; border-radius: 8px; outline: none; font-size: 1rem; margin-bottom: 8px; }
+    button {
+      background-color: #66bb6a; color: white; padding: 10px; font-size: 1rem;
+      border: 1px solid #555; border-radius: 8px; cursor: pointer; transition: background-color 0.2s ease;
+    }
+    button:hover { background-color: #388e3c; }
+    .chat-bubble {
+      display: inline-block; border: 1px solid #555; padding: 10px 14px; border-radius: 16px;
+      max-width: 80%; line-height: 1.5; word-wrap: break-word; white-space: pre-wrap;
+      opacity: 0; animation: fadeIn 0.2s ease forwards;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .user-bubble { align-self: flex-end; background-color: #dcedc8; color: #333; border-top-right-radius: 0; }
+    .bot-bubble { align-self: flex-start; background-color: #66bb6a; color: white; border-top-left-radius: 0; text-align: left; }
+    .bubble-footer { display: flex; align-items: center; margin-top: 2px; opacity: 0; transition: opacity 0.3s ease; font-size: 0.75rem; color: #555; }
+    .bubble-footer.user { justify-content: flex-end; }
+    .bubble-footer.bot { justify-content: flex-start; }
+    .bubble-footer-inner { display: flex; align-items: center; }
+    .chat-bubble:hover + .bubble-footer, .bubble-footer:hover { opacity: 0.7; }
+    .timestamp.user { text-align: right; white-space: nowrap; }
+    .timestamp.bot { text-align: left; white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Eden Foods Chatbot</h2>
+    <div id="chatbox">
+      <div id="volumeBtnContainer" class="volume-btn-container">
+        <img id="volumeBtn" class="volume-btn" src="/static/volume-off.png" alt="Volume Toggle">
+      </div>
+    </div>
+    <input type="text" id="userInput" placeholder="Ask a question" />
+    <button onclick="sendMessage()">Send</button>
+    <audio id="userSound" src="/static/happy-pop-2.mp3" muted></audio>
+    <audio id="botSound" src="/static/happy-pop-3.mp3" muted></audio>
+  </div>
+
+<script>
+  const chatbox = document.getElementById("chatbox");
+  const inputField = document.getElementById("userInput");
+  const sendBtn = document.querySelector("button[onclick='sendMessage()']");
+  const userSound = document.getElementById("userSound");
+  const botSound = document.getElementById("botSound");
+  const volumeBtn = document.getElementById("volumeBtn");
+  const volumeBtnContainer = document.getElementById("volumeBtnContainer");
+
+  let typingTimer, ellipsisTimer, ellipsisCount = 0;
+  let isMuted = true;
+
+  function updateVolumeButtonPosition() {
+    const scrollTop = chatbox.scrollTop;
+    volumeBtnContainer.style.top = `${scrollTop}px`;
+  }
+  chatbox.addEventListener("scroll", updateVolumeButtonPosition);
+  window.addEventListener("load", updateVolumeButtonPosition);
+  window.addEventListener("resize", updateVolumeButtonPosition);
+
+  function toggleVolume() {
+    isMuted = !isMuted;
+    userSound.muted = isMuted;
+    botSound.muted = isMuted;
+    volumeBtn.src = isMuted ? "/static/volume-off.png" : "/static/volume-on.png";
+    volumeBtn.alt = isMuted ? "Volume Off" : "Volume On";
+    volumeBtn.style.opacity = '1';
+  }
+  volumeBtn.addEventListener("click", toggleVolume);
+  volumeBtn.addEventListener("touchstart", (e) => { e.preventDefault(); toggleVolume(); });
+
+  document.body.addEventListener('touchmove', (e) => {
+    if (!chatbox.contains(e.target)) e.preventDefault();
+  }, { passive: false });
+
+  function appendMessage(message, isUser = false) {
+    clearTyping();
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = isUser ? "flex-end" : "flex-start";
+
+    const bubble = document.createElement("div");
+    bubble.classList.add("chat-bubble", isUser ? "user-bubble" : "bot-bubble");
+    bubble.innerHTML = message;
+
+    const footer = document.createElement("div");
+    footer.className = `bubble-footer ${isUser ? "user" : "bot"}`;
+    const inner = document.createElement("div");
+    inner.className = "bubble-footer-inner";
+    const timestamp = document.createElement("span");
+    timestamp.className = `timestamp ${isUser ? "user" : "bot"}`;
+    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    timestamp.textContent = isUser ? `You ~ ${time}` : `Eve ~ ${time}`;
+
+    inner.appendChild(timestamp);
+    footer.appendChild(inner);
+    wrapper.appendChild(bubble);
+    wrapper.appendChild(footer);
+    chatbox.appendChild(wrapper);
+    chatbox.scrollTop = chatbox.scrollHeight;
+
+    updateVolumeButtonPosition();
+
+    if ('ontouchstart' in window) {
+      bubble.addEventListener('touchstart', () => {
+        footer.style.opacity = '0.7';
+        if (wrapper.timeoutId) clearTimeout(wrapper.timeoutId);
+        wrapper.timeoutId = setTimeout(() => { footer.style.opacity = '0'; }, 3000);
+      });
+    }
+
+    if (!isMuted) {
+      try {
+        if (isUser) { userSound.volume = 0.3; userSound.currentTime = 0; userSound.play(); }
+        else { botSound.volume = 0.3; botSound.currentTime = 0; botSound.play(); }
+      } catch (e) { console.log("Audio playback failed:", e); }
+    }
+  }
+
+  function showTypingIndicator() {
+    const wrapper = document.createElement("div");
+    wrapper.id = "typingWrapper";
+    wrapper.style.display = "flex";
+    wrapper.style.justifyContent = "flex-start";
+    const indicator = document.createElement("div");
+    indicator.id = "typingIndicator";
+    indicator.className = "chat-bubble bot-bubble";
+    indicator.textContent = "Eve is typing";
+    wrapper.appendChild(indicator);
+    chatbox.appendChild(wrapper);
+    chatbox.scrollTop = chatbox.scrollHeight;
+    ellipsisTimer = setInterval(() => {
+      ellipsisCount = (ellipsisCount + 1) % 4;
+      indicator.textContent = "Eve is typing" + ".".repeat(ellipsisCount);
+    }, 500);
+  }
+
+  function clearTyping() {
+    clearTimeout(typingTimer);
+    clearInterval(ellipsisTimer);
+    ellipsisCount = 0;
+    const existing = document.getElementById("typingWrapper");
+    if (existing) existing.remove();
+  }
+
+  // Only ask for geolocation if the message looks location-related
+  function isLocationIntent(text) {
+    if (!text) return false;
+    const q = text.trim().toLowerCase();
+
+    // Quick exact matches
+    if (q === "locations" || q === "location" || q === "stores" || q === "store") return true;
+
+    // Single-line regex (no /x, no newlines)
+    const LOCATION_REGEX = /\b(near me|nearest|nearby|closest|close by|around me|store|stores?|location|locations?|hours(?:\s+in|\s+near)?|hours|open now|promotion|promotions?|deal|deals|special|specials|sale|sales)\b/;
+
+    return LOCATION_REGEX.test(q);
+  }
+
+  function sendMessage() {
+    const userMessage = inputField.value.trim();
+    if (!userMessage) return;
+    appendMessage(userMessage, true);
+    inputField.value = "";
+    typingTimer = setTimeout(showTypingIndicator, 500);
+
+    const send = (coords) => {
+      const body = { message: userMessage };
+      if (coords && typeof coords.latitude === "number" && typeof coords.longitude === "number") {
+        body.lat = coords.latitude;
+        body.lon = coords.longitude;
+      }
+      fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      })
+      .then(res => res.json())
+      .then(data => {
+        const formatted = data.response
+          .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+          .replace(/#{1,6}\s*/g, '')
+          .replace(/\n\n/g, '<br><br>')
+          .replace(/\n/g, '<br>');
+        appendMessage(formatted);
+      })
+      .catch(() => {
+        clearTyping();
+        appendMessage("Oops—something went wrong. Please try again.");
+      });
+    };
+
+    // Gate geolocation: only request when it looks location-related
+    if (navigator.geolocation && isLocationIntent(userMessage)) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => send(pos.coords),
+        () => send(null),
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 300000 }
+      );
+    } else {
+      send(null);
+    }
+  }
+
+  sendBtn.addEventListener("click", sendMessage);
+  inputField.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("/reset", { method: "POST" });
+    setTimeout(() => {
+      appendMessage("Hey, my name is Eve! How can I assist you today? 😊🌼<br><br>" +
+        "You can ask me about:<br><br>" +
+        "- Hours<br>" +
+        "- Locations<br>" +
+        "- Return Policy<br>" +
+        "- Promotions<br>" +
+        "- Products");
+    }, 1000);
+  });
+</script>
+</body>
+</html>
