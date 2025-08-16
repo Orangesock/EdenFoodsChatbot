@@ -1,7 +1,25 @@
+# Python bytecode
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Environment variables
 .env
+
+# Logs
+*.log
+
+# MacOS system files
 .DS_Store
-.vscode/
+
+# Node modules (if using JS)
 node_modules/
+
+# IDE settings
+.vscode/
+.idea/
 
